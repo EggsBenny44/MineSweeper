@@ -198,11 +198,4 @@ class FormPane extends VBox {
 		}
 		return true;
 	}
-	
-// ******** debug ************
-	public void test() {
-		gridPane.test();	
-	}
-// ******** debug ************
-
 }

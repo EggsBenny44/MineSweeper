@@ -1,9 +1,7 @@
 import java.util.ArrayList;
 
-import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.Node;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.GridPane;
 
@@ -281,34 +279,5 @@ class GamePane extends GridPane {
 				if (button.getButtonType() != -1) button.setButtonType(button.getButtonType() + 1);
 			}
 		}
-// ********* debug  ***************
-		ObservableList<Node> list = getChildren();
-		for (int i = 0; i < list.size(); i++) {
-			MinesButton button = (MinesButton) getChildren().get(i);
-			System.out.print(button.getButtonType() + "\t");
-			if (i % colMaxCount == colMaxCount -1) {				
-				System.out.println();
-			}
-		}
-		System.out.println();
-
-// ********* debug  ***************
 	}
-	
-
-	// ******** debug ************
-	public void test() {
-		for (int bombIdx = 0; bombIdx < bombs.size(); bombIdx++) {
-			MinesButton button = (MinesButton) getChildren().get(bombs.get(bombIdx));
-			button.setGraphic(button.imageView[2]);
-			button.setGuessType(MinesButton.GUESS_TYPE_SELECT);
-		}
-		for (int i = 0; i < colMaxCount * rowMaxCount; i++) {
-			MinesButton button = (MinesButton) getChildren().get(i);
-			if(!button.isOpen() && !button.getGraphic().equals(button.imageView[2])) {
-				button.open();
-			}
-		}
-	}
-	// ******** debug ************
 }

@@ -19,17 +19,8 @@ public class Minesweeper extends Application {
 		FormPane formPane = new FormPane(1);
 		MenuBar menuBar = new MenuBar();
 		Menu game = new Menu("Game");
-		// ******** debug ************
-		Menu test = new Menu("Test");
-		menuBar.getMenus().addAll(game, test);
-		MenuItem testItem = new MenuItem("Open → Win()");
-		testItem.setOnAction(e -> {	
-			formPane.test();
-		});		
-		test.getItems().add(testItem);
-		// ******** debug ************
+		menuBar.getMenus().addAll(game);
 
-//		menuBar.getMenus().addAll(game);
 		MenuItem begginer = new MenuItem("Begginer");
 		begginer.setOnAction(e -> {	
 			formPane.changeLevel(1);
