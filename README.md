@@ -1,8 +1,8 @@
 # Name
 MineSweeper
 
-# Description
+# Features
 This application is created by JavaFx
 
-# Authour
+# Author
 Eggs Benny
